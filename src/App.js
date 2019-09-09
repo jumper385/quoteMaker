@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import BusinessDetails from './components/BusinessDetails';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BusinessDetails name='Henry Chen'
+      address={{
+        street:'114 Walderton Ave', 
+        suburb:'Balga', 
+        postcode:6061,
+        state:'Western Australia',
+        country:'Australia'}}
+      />
+
+      <p>Breakdown of Costs</p>
+      <p>Variation And Revision</p>
+      <p>Payment + Terms and Conditions</p>
+      <p>Preffered Payment Method</p>
+      <p>Schedule of Quote + Expiry Date</p>
+      <p>Customer Signature + Acceptance</p>
     </div>
   );
 }
