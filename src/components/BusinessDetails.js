@@ -1,14 +1,16 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 function BusinessDetails(props){
     return(
         <div>
-            <h1>{props.name}</h1>
-            <p>{props.address.street}</p>
-            <p>{props.address.suburb}, {props.address.postcode}</p>
-            <p>{props.address.state}, {props.address.country}</p>
+            <h2>{props.businessDetails.businessName || 'null'}</h2>
+            <p>ABN: {props.businessDetails.ABN || 'null'}</p>
+            {props.businessDetails.address.map( (line, index) => (<p key={index}>{line}</p>)) || 'null'}
         </div>
     )
 }
 
-export default BusinessDetails
+const mapStateToProps = state => ({...state})
+
+export default connect(mapStateToProps)(BusinessDetails)
