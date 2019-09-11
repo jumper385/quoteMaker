@@ -17,7 +17,9 @@ const componentState = [
     { code: 'case', name: 'Antec DP501', amount: 1, cost: 95, supplier: 87 },
 ]
 
-const notesState = []
+const notesState = [
+    {note:''}
+]
 
 const businessDetailsReducer = (state = businessDetailsState, action) => {
     return state
