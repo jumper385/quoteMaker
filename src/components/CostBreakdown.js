@@ -9,14 +9,13 @@ class CostBreakdown extends React.Component {
     let total_cost = 0
     let total_supplier = 0
     return (
-      <div>
-        <h3>Cost Breakdown</h3>
-        <table>
+      <div style={{width:'100%'}}>
+        <table style={{width:'100%', textAlign:'left', margin:'32pt 0pt'}}>
           <thead>
-            <th>Code</th>
-            <th>Name</th>
-            <th>Unit Cost</th>
+            <th style={{height:'24pt'}}>SKU</th>
+            <th>Description</th>
             <th>Amount</th>
+            <th>Cost</th>
             <th>Total Cost</th>
           </thead>
           <tbody>
@@ -24,7 +23,7 @@ class CostBreakdown extends React.Component {
               total_cost += amount*cost
               total_supplier += amount*supplier
               return (
-                <tr key={code}>
+                <tr style={{height:'24pt'}} key={code}>
                   <td>{code}</td>
                   <td>{name}</td>
                   <td>{amount}</td>
@@ -36,10 +35,8 @@ class CostBreakdown extends React.Component {
           </tbody>
         </table>
         <p>Total Cost: ${total_cost}</p>
-        <p>Supplier Cost: ${total_supplier}</p>
-        <p>Profit: ${total_cost-total_supplier+85}</p>
-        <p>Profit/Hr: ${(total_cost-total_supplier + 85)/4}</p>
-        <p>Margin: {(total_cost - total_supplier)*100/total_supplier}%</p>
+        <p>Profit: ${total_cost - total_supplier}</p>
+        <p>Rate (4hrs): ${(total_cost-total_supplier)/4}</p>
       </div>
     )
   }

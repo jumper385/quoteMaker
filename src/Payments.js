@@ -1,6 +1,6 @@
 import React from 'react'
 
-class PaymentCalculator extends React.Component{
+class PaymentConditions extends React.Component{
     render(){
         return (
             <div>
@@ -13,4 +13,4 @@ class PaymentCalculator extends React.Component{
     }
 }
 
-export default PaymentCalculator
+export default PaymentConditions

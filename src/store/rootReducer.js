@@ -1,24 +1,25 @@
 import { combineReducers } from 'redux'
 const initialState = []
 const businessDetailsState = {
-    businessName: 'Henry Chen',
+    businessName: 'fracture',
     ABN: '123 456 7',
-    address: ['114 Walderton Avenue', 'Balga WA, 6061', 'Australia']
+    address: ['35 Stirling Hwy', 'Crawley 6009', 'WA, Australia'],
+    email:'henrychen385@gmail.com'
 }
 const componentState = [
     { code: 'build', name: 'Build Fee', amount: 1, cost: 85, supplier: 0 },
-    { code: 'cpu', name: 'AMD Ryzen 3 3200G', amount: 1, cost: 144, supplier: 144 },
-    { code: 'mobo', name: 'MSI B450-A PRO', amount: 1, cost: 155, supplier: 155 },
-    { code: 'ram', name: 'DDR4 8 GB 2666 MHz', amount: 2, cost: 60, supplier: 52 },
-    { code: 'ssd', name: 'Crucial BX500 120 GB SSD', amount: 1, cost: 40, supplier: 35 },
-    { code: 'hdd', name: 'WD Blue 1TB', amount: 1, cost: 58, supplier: 58 },
-    { code: 'gpu', name: 'Asus TUF GTX-1660 Ti', amount: 1, cost: 479, supplier: 479 },
-    { code: 'psu', name: 'Cooler Master MWE500 500W PSU', amount: 1, cost: 60, supplier: 55 },
-    { code: 'case', name: 'Antec DP501', amount: 1, cost: 95, supplier: 87 },
+    { code: 'cpu', name: 'Intel Core i5-9400F', amount: 1, cost: 255, supplier: 235 },
+    { code: 'mobo', name: 'Asus Prime B365M-K', amount: 1, cost: 119, supplier: 119 },
+    { code: 'ram', name: 'G.Skill Trident Z 16 GB 3200 MHz ', amount: 1, cost: 210, supplier: 179 },
+    { code: 'ssd', name: 'Western Digital Blue NVMe 250 GB', amount: 1, cost: 80, supplier: 75 },
+    { code: 'hdd', name: 'Western Digital Blue HDD 1 TB', amount: 1, cost: 53, supplier: 53 },
+    { code: 'gpu', name: 'ASUS GeForce GTX-1660 TUF OC', amount: 1, cost: 410, supplier: 399 },
+    { code: 'psu', name: 'Cooler Master MWE500 500W', amount: 1, cost: 80, supplier: 80 },
+    { code: 'case', name: 'Antec DP301M', amount: 1, cost: 90, supplier: 69 },
 ]
 
 const notesState = [
-    {note:''}
+    {note:'Standard Mid-Budget Gaming Build'}
 ]
 
 const businessDetailsReducer = (state = businessDetailsState, action) => {
